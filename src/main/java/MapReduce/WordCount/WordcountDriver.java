@@ -2,11 +2,14 @@ package MapReduce.WordCount;
 
 
 import org.apache.hadoop.conf.Configuration;
+
 import java.io.IOException;
+
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
+import org.apache.hadoop.mapreduce.lib.input.CombineTextInputFormat;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
@@ -28,6 +31,14 @@ public class WordcountDriver {
 
         // 2 设置jar加载路径
         job.setJarByClass(WordcountDriver.class);
+
+
+        // 如果不设置InputFormat，它默认用的是TextInputFormat.class
+        job.setInputFormatClass(CombineTextInputFormat.class);
+
+        //虚拟存储切片最大值设置4m
+        CombineTextInputFormat.setMaxInputSplitSize(job, 2194304);
+
 
         // 3 设置map和reduce类
         job.setMapperClass(WordcountMapper.class);

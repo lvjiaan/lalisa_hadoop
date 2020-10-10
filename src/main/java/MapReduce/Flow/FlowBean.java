@@ -14,9 +14,9 @@ import java.io.IOException;
  * @ModefiedDate:
  */
 public class FlowBean implements Writable {
-    private Long upFlow;
-    private Long downFlow;
-    private Long sumFlow;
+    private long upFlow;
+    private long downFlow;
+    private long sumFlow;
 
 
     public FlowBean() {
@@ -24,6 +24,7 @@ public class FlowBean implements Writable {
     }
 
     public FlowBean(long sum_upFlow, long sum_downFlow) {
+        super();
         this.upFlow=sum_upFlow;
         this.downFlow=sum_downFlow;
         this.sumFlow=upFlow+downFlow;
