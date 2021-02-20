@@ -1,27 +1,27 @@
-package cn.lvjaweb.web.controller;
+package cn.lvja.server.controller;
 
 /**
  * @Describe:
  * @Author：lvja
- * @Date：2021/2/5 12:05
+ * @Date：2021/2/5 11:27
  * @Modifier：
  * @ModefiedDate:
  */
 
-import cn.lvjaserver.server.api.TestServiceApi;
+import cn.lvja.server.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/test")
-public class TestWebController {
+public class TestController {
 
     @Autowired
-    private TestServiceApi testServicesApi;
+    private TestService testService;
 
-    @RequestMapping("/getTest")
-    public String getTest() {
-        return testServicesApi.get("通过web调用的");
+    @RequestMapping("/get")
+    public String get(String name) {
+        return testService.get(name);
     }
 }

@@ -1,4 +1,4 @@
-package cn.lvjaserver.server.service.impl;
+package cn.lvja.server.service.impl;
 
 /**
  * @Describe:
@@ -8,7 +8,7 @@ package cn.lvjaserver.server.service.impl;
  * @ModefiedDate:
  */
 
-import cn.lvjaserver.server.service.TestService;
+import cn.lvja.server.service.TestService;
 import org.springframework.stereotype.Service;
 
 @Service

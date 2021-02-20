@@ -8,10 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="BigDataStudy" />
         <module name="server" />
-        <module name="web" />
-        <module name="eureka" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="eureka" target="1.8" />
+      <module name="web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

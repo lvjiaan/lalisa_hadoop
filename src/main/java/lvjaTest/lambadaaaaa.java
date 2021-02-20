@@ -3,16 +3,10 @@ package lvjaTest;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @Describe:
- * @Author£ºlvja
- * @Date£º2020/12/21 14:45
- * @Modifier£º
- * @ModefiedDate:
- */
+
 public class lambadaaaaa {
     public static void main(String[] args) {
-        //³£¼ûµÄº¯ÊýÊ½½Ó¿Ú£ºRunnable¡¢ Comparable--ÅÅÐò(ÊÇÒ»¸öº¯ÊýÊ½½Ó¿ÚÂð£¿)
+        //
 
         Comparable<Integer> comparable=new Comparable<Integer>() {
             @Override
@@ -21,7 +15,7 @@ public class lambadaaaaa {
             }
         };
 
-        //Lambada±í´ïÊ½µÄ·½·¨
+        //Lambadaï¿½ï¿½ï¿½Ê½ï¿½Ä·ï¿½ï¿½ï¿½
 
         Comparable<Integer> com=(a)->a;
         int i = com.compareTo(3);
@@ -41,15 +35,15 @@ public class lambadaaaaa {
 //            System.out.print(item)
 //        );
 
-//        //ÄäÃûÄÚ²¿ÀàµÄÐÎÊ½¿ªÆôÒ»¸öÏß³Ì
+//        //ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß³ï¿½
 //        new Thread(new Runnable() {
 //            @Override
 //            public void run() {
-//                System.out.println("4564£¡");
+//                System.out.println("4564ï¿½ï¿½");
 //            }
 //        }).start();
 //
-//        //Lambada±í´ïÊ½´´½¨ÄäÃûÄÚ²¿Àà¿ªÆôÒ»¸öÏß³Ì
+//        //Lambadaï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½à¿ªï¿½ï¿½Ò»ï¿½ï¿½ï¿½ß³ï¿½
 //        new Thread(() -> System.out.println("-------------")).start();
 
 

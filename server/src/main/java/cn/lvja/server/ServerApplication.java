@@ -1,13 +1,14 @@
-package cn.lvjaserver.server;
+package cn.lvja.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
-import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cache.annotation.EnableCaching;
 
-@SpringBootApplication
-@EnableFeignClients
-@EnableDiscoveryClient
+
+//@SpringBootApplication(exclude = DruidDataSourceAutoConfigure.class)
+@SpringBootApplication()
+//@MapperScan(value = {"com.lvja.server.dao"})
+@EnableCaching
 public class ServerApplication {
 
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package cn.lvjaserver.server.service;
+package cn.lvja.server.service;
 
 /**
  * @Describe:
