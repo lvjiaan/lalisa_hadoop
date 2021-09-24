@@ -1,4 +1,4 @@
-package MapReduce.udft;
+package MapReduce.udtf;
 
 import org.apache.hadoop.hive.ql.exec.UDAF;
 import org.apache.hadoop.hive.ql.exec.UDAFEvaluator;

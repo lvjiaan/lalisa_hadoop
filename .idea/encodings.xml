@@ -9,8 +9,8 @@
     <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/KVText/KVTextMapper.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/KVText/KVTextReducer.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/WordCount/WordcountDriver.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/udft/split_match.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/udft/split_rank.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/udtf/split_match.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/udtf/split_rank.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/ZooKeeper/ZooKeeperApi.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/lvjaTest/bar.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
