@@ -24,7 +24,7 @@ public class KVTextDriver {
 
         Configuration conf = new Configuration();
         // 设置切割符
-        conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, " ");
+//        conf.set(KeyValueLineRecordReader.KEY_VALUE_SEPERATOR, "");
         // 1 获取job对象
         Job job = Job.getInstance(conf);
 
@@ -42,13 +42,13 @@ public class KVTextDriver {
         job.setOutputValueClass(LongWritable.class);
 
         // 5 设置输入输出数据路径
-        FileInputFormat.setInputPaths(job, new Path(args[0]));
+        FileInputFormat.setInputPaths(job, new Path("D:\\1.txt"));
 
         // 设置输入格式
         job.setInputFormatClass(KeyValueTextInputFormat.class);
 
         // 6 设置输出数据路径
-        FileOutputFormat.setOutputPath(job, new Path(args[1]));
+        FileOutputFormat.setOutputPath(job, new Path("D:\\out\\"));
 
         // 7 提交job
         job.waitForCompletion(true);

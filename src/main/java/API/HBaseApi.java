@@ -6,17 +6,12 @@ import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
-import org.apache.hadoop.hbase.filter.CompareFilter;
-import org.apache.hadoop.hbase.filter.Filter;
-import org.apache.hadoop.hbase.filter.RegexStringComparator;
-import org.apache.hadoop.hbase.filter.RowFilter;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.List;
+
 
 /**
  * HBase DDL和DML相关API操作
@@ -95,9 +90,6 @@ public class HBaseApi {
         table.close();
     }
 
-
-
-
     /**
      * 创建表是否存在
      * @return 存在返回true，不存在返回false
@@ -110,30 +102,6 @@ public class HBaseApi {
         boolean exists =  admin.tableExists(TableName.valueOf("lt_patent_main_tomodel_tohbase"));
         System.out.println( exists);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

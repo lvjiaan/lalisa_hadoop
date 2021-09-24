@@ -7,14 +7,6 @@ package ZooKeeper;
  * @Modifier：
  * @ModefiedDate:
  */
-/**
- * 软件版权：流沙~~
- * 修改日期   修改人员     修改说明
- * =========  ===========  =====================
- * 2020/1/14    liusha   新增
- * =========  ===========  =====================
- */
-
 import org.apache.zookeeper.AsyncCallback;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.KeeperException;

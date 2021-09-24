@@ -16,14 +16,19 @@ public class KVTextMapper extends Mapper<Text, Text, Text, LongWritable>{
 
     // 1 ÉèÖÃvalue
     LongWritable v = new LongWritable(1);
+    Text k=new Text();
 
     @Override
     protected void map(Text key, Text value, Context context)
             throws IOException, InterruptedException {
 
-// banzhang ni hao
+        String[] words=key.toString().split(",");
+        System.out.println(words);
+        for (String word:words){
+            k.set(word);
+            // 2 Ð´³ö
+            context.write(k, v);
+        }
 
-        // 2 Ð´³ö
-        context.write(key, v);
     }
 }

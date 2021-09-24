@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/eureka" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/eureka/src/main/resources/application.yml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/API/HBaseApi.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/Flow/FlowBean.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/Flow/FlowCountMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/Flow/FlowsumDriver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/KVText/KVTextDriver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/KVText/KVTextMapper.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/KVText/KVTextReducer.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/WordCount/WordcountDriver.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/udft/split_match.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/main/java/MapReduce/udft/split_rank.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/main/java/ZooKeeper/ZooKeeperApi.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lvjaTest/bar.java" charset="GBK" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

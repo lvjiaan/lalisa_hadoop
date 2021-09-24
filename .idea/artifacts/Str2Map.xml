@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Str2Map">
+    <output-path>$PROJECT_DIR$/out/artifacts/Str2Map</output-path>
+    <root id="archive" name="Str2Map.jar">
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/java/HIVE/Str2Map.java" />
+    </root>
+  </artifact>
+</component>
