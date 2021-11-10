@@ -1,6 +1,9 @@
 package lvjaTest;
 
-import java.text.MessageFormat;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.*;
 
 /**
  * @Describe:
@@ -11,7 +14,13 @@ import java.text.MessageFormat;
  */
 public class test {
     public static void main(String[] args) {
-        String express= MessageFormat.format("(TMDB=CN AND 申请人区域代码=330200 AND 申请日期 = {0})","fuck").toString();
-        System.out.println(express);
+
+        String reg="\\d*";
+        String str="2012.4612";
+        if (str.matches(reg)){
+            System.out.println("true");
+        }
+
+
     }
 }

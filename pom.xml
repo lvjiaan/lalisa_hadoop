@@ -37,6 +37,11 @@
             <artifactId>junit</artifactId>
             <version>RELEASE</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>cn.hutool</groupId>-->
+<!--            <artifactId>hutool-all</artifactId>-->
+<!--            <version>5.0.3</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
@@ -108,39 +113,39 @@
             <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.sqoop/sqoop -->
-        <dependency>
-            <groupId>org.apache.sqoop</groupId>
-            <artifactId>sqoop</artifactId>
-            <version>1.4.7</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.sqoop</groupId>-->
+<!--            <artifactId>sqoop</artifactId>-->
+<!--            <version>1.4.7</version>-->
+<!--        </dependency>-->
         <dependency>
             <groupId>org.apache.kylin</groupId>
             <artifactId>kylin-jdbc</artifactId>
             <version>3.1.2</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.apache.sqoop/sqoop-core -->
-        <dependency>
-            <groupId>org.apache.sqoop</groupId>
-            <artifactId>sqoop-core</artifactId>
-            <version>1.99.7</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.sqoop</groupId>-->
+<!--            <artifactId>sqoop-core</artifactId>-->
+<!--            <version>1.99.7</version>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.apache.sqoop/sqoop-common -->
-        <dependency>
-            <groupId>org.apache.sqoop</groupId>
-            <artifactId>sqoop-common</artifactId>
-            <version>1.99.7</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.sqoop</groupId>-->
+<!--            <artifactId>sqoop-common</artifactId>-->
+<!--            <version>1.99.7</version>-->
+<!--        </dependency>-->
         <!-- https://mvnrepository.com/artifact/org.apache.sqoop/sqoop-client -->
-        <dependency>
-            <groupId>org.apache.sqoop</groupId>
-            <artifactId>sqoop-client</artifactId>
-            <version>1.99.7</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache</groupId>
-            <artifactId>sqoop</artifactId>
-            <version>1.99.7</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.apache.sqoop</groupId>-->
+<!--            <artifactId>sqoop-client</artifactId>-->
+<!--            <version>1.99.7</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache</groupId>-->
+<!--            <artifactId>sqoop</artifactId>-->
+<!--            <version>1.99.7</version>-->
+<!--        </dependency>-->
 
 
     </dependencies>

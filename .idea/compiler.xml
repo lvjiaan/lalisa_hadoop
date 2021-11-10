@@ -7,8 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="BigDataStudy" />
-        <module name="andy" />
+        <module name="lalisa_hadoop" />
         <module name="hadoop" />
+        <module name="andy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
