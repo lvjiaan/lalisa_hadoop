@@ -11,7 +11,6 @@ import org.apache.hadoop.hive.serde2.objectinspector.StructObjectInspector;
 import org.apache.hadoop.hive.serde2.objectinspector.primitive.PrimitiveObjectInspectorFactory;
 import org.json.JSONArray;
 import org.json.JSONObject;
-
 import java.util.*;
 
 
@@ -29,7 +28,7 @@ public class patentee_valid extends GenericUDTF {
     public StructObjectInspector initialize(ObjectInspector[] args)
             throws UDFArgumentException {
         if (args.length != 3) {
-            throw new UDFArgumentLengthException("[lalalalisa1108] please put 3 params 1.json 2.grantName 3.grantDate");
+            throw new UDFArgumentLengthException("[lalisa] please put 3 params 1.json 2.grantName 3.grantDate");
         }
 
         ArrayList<String> fieldNames = new ArrayList<String>();
@@ -62,7 +61,7 @@ public class patentee_valid extends GenericUDTF {
             String afterChangePerson = (String) jsonObject.get("afterchangeperson");
 
             String reg = "\\d*";
-            if (!announcementDate.matches(reg) || !effectiveDate.matches(reg) || !beforeChangePerson.matches(reg) || !afterChangePerson.matches(reg)) {
+            if (!announcementDate.matches(reg) || !effectiveDate.matches(reg)) {
                 continue;
             }
 

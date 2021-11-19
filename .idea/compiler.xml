@@ -12,17 +12,8 @@
         <module name="andy" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="eureka" target="1.8" />
-      <module name="server" target="1.8" />
-      <module name="web" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="eureka" options="-parameters" />
-      <module name="server" options="-parameters" />
-      <module name="web" options="-parameters" />
-    </option>
+    <option name="ADDITIONAL_OPTIONS_STRING" value=" -encoding UTF-8" />
   </component>
 </project>
