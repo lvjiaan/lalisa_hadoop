@@ -74,53 +74,45 @@ public class addr_section extends GenericUDTF {
             changeList.add(map);
         }
 
+        Map<String, Object> originalMap = new HashMap<>();
+        originalMap.put("transferDate",Integer.parseInt(applyDate));
+        originalMap.put("beforeChangeAddr","");
+        originalMap.put("afterChangeAddr",originalAddr);
+        changeList.add(originalMap);
 
-        int nextIndex = -1;
-        String lastAddr = originalAddr;
-        int nextDate = 20991231;
-        int lastDate = Integer.parseInt(applyDate);
+
 
         List<String[]> outList = new ArrayList<>();
 
-        while (changeList.size() > 0) {
-            boolean matchBiggerLastDateAndSmallerNextDate=false;
 
-            //得到匹配到的最小的
-            int tempDate=20991231;
-            int tempIndex=-1;
-            for (int i =0;i<changeList.size();i++){
-                Map<String,Object> data=changeList.get(i);
-                if (data.get("beforeChangeAddr").equals(lastAddr)&&nextDate>(int)data.get("transferDate")&&lastDate<(int)data.get("transferDate")){
-                    matchBiggerLastDateAndSmallerNextDate=true;
-                    if ((int)data.get("transferDate")<tempDate){
-                        tempDate=(int)data.get("transferDate");
-                        tempIndex=i;
+        List<Map<String,Object>> rowList=new ArrayList<>();
+
+        int size2099=0;
+
+        for (Map<String,Object> data:changeList){
+            String addr= (String) data.get("afterChangeAddr");
+            int startDate= (int) data.get("transferDate");
+            getIndexByLast(addr,startDate,changeList,rowList,size2099);
+        }
+
+        if (size2099>1){
+            for (Map<String,Object> data:rowList){
+                if ((int)data.get("endDate")==20991231){
+                    int endDate=20991231;
+                    for (Map<String,Object> data2:rowList){
+                        if ((int)data2.get("startDate")>(int)data.get("startDate")&&(int)data2.get("startDate")<endDate){
+                            endDate=(int)data2.get("startDate");
+                        }
                     }
+                    data.put("endDate",endDate);
                 }
-            }
-            if (matchBiggerLastDateAndSmallerNextDate){
-                nextIndex=tempIndex;
-                nextDate=tempDate;
-                String addr = lastAddr;
-                String startDate = String.valueOf(lastDate);
-                String endDate = String.valueOf(tempDate);
-                String[] outArr = {addr, startDate, endDate};
-                outList.add(outArr);
-
-                Map<String, Object> map = changeList.get(nextIndex);
-                lastDate = nextDate;
-                nextDate = 20991231;
-                lastAddr = (String) map.get("afterchangeaddr");
-                changeList.remove(nextIndex);
             }
         }
 
-        String addr = lastAddr;
-        String startDate = String.valueOf(lastDate);
-        String endDate = "20991231";
-        String[] outArr = {addr, startDate, endDate};
-        outList.add(outArr);
-
+        for (Map<String,Object> data:rowList){
+            String[] outArr = {(String) data.get("addr"), String.valueOf(data.get("startDate")), String.valueOf(data.get("endDate"))};
+            outList.add(outArr);
+        }
 
         for (String[] strings : outList) {
             try {
@@ -129,6 +121,51 @@ public class addr_section extends GenericUDTF {
             } catch (Exception ignored) {
             }
         }
+    }
+
+    private void getIndexByLast(String addr, int startDate, List<Map<String, Object>> changeList, List<Map<String, Object>> rowList, int size2099) {
+        int endDate=20991231;
+        boolean matchBiggerLastDate=false;
+
+        for (int i=0;i<changeList.size();i++){
+            Map<String,Object> data=changeList.get(i);
+                if (data.get("beforeChangeAddr").equals(addr)&&startDate<(int)data.get("transferDate")){
+                    matchBiggerLastDate=true;
+                    if ((int)data.get("transferDate")<endDate){
+                        endDate=(int)data.get("transferDate");
+                    }
+                }
+        }
+
+        if (!matchBiggerLastDate){
+            boolean matchAddr=false;
+            for (int i=0;i<changeList.size();i++){
+                Map<String,Object> data=changeList.get(i);
+                if (data.get("beforeChangeAddr").equals(addr)){
+                    matchAddr=true;
+                    if ((int)data.get("transferDate")<endDate){
+                        endDate=(int)data.get("transferDate");
+                        startDate=endDate;
+                    }
+                }
+            }
+        }
+
+
+        Map<String,Object> result=new HashMap<>();
+        result.put("addr",addr);
+        result.put("startDate",startDate);
+        result.put("endDate",endDate);
+
+        if (endDate==20991231){
+            size2099+=1;
+        }
+
+        rowList.add(result);
+
+
+
+
     }
 
     @Override
